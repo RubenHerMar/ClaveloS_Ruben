@@ -1,0 +1,495 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+
+/*VARIABLES PARA LOS COLORES*/
+:root{
+    --verde: #6e97fa;
+    --limon: #afefa4;
+    --degradado:linear-gradient(90deg, var(--limon), var(--verde));
+}
+
+/*PROPIEDADES PARA TODO EL DOCUMENTO*/
+*{
+    background-color: #cef6f4;
+    font-family: 'Roboto', sans-serif;
+    /*margin: 0;*/
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    /*text-transform: capitalize;*/
+}
+
+/*LOGO CLAVELOS RUBEN*/
+header .logo{
+    font-size: 2rem;
+    color: var(--verde);
+}
+
+
+/*
+header .logo span{
+    color: var(--limon);
+}
+*/
+
+
+/*PROPIEDADES DEL HEADER*/
+header{
+    width: 100%;
+    /*padding: 1%;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/*Para la opción de seleccionar aplicado a toda la web*/
+*::selection{
+    background: var(--limon);
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+
+    /*display: flex;*/ /* Usamos flexbox para centrar el contenido */
+    /*justify-content: center;*/ /* Centra horizontalmente los elementos hijos */
+   /* align-items: center*/; /* Centra verticalmente los elementos hijos */
+    /*
+    margin: 0; !* Elimina el margen predeterminado del body *!
+    */
+}
+
+
+/*
+#div_bienvenida{
+    display: flex;
+    justify-content: center;
+   flex-direction: column; /* Alinear elementos verticalmente */
+/*align-items: center; /* Centrar horizontalmente los elementos */
+/*position: fixed;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+
+
+
+/*Propiedades del texto del index hasta antes del "Ir a la parte de arriba".*/
+#div_portada{
+    font-size: 15px;
+    line-height: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#div_antes_flautas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    font-size: 15px;
+    line-height: 40px;
+    margin: 2% 10% 5%;
+
+}
+
+/*Propiedades de las flautas*/
+#div_img_flautas{
+    align-content: center;
+    height: 480px;
+    width: 230px;
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items:center; /* Centrar horizontalmente los elementos */
+    margin: 12% 10% 11%;
+    justify-content: center;
+}
+#div_despues_flautas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+/*Propiedades de la imagen del logo de la web*/
+#div_img_logo{
+    align-content: center;
+    width: 500px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items:center; /* Centrar horizontalmente los elementos */
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 480px;
+
+}
+
+
+/*.p{
+    /*justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    /*align-items:center; /* Centrar horizontalmente los elementos */
+    /*margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%; }*/
+
+
+/*todo el footer, párrafo, ubi y localización maps*/
+#div_footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    bottom: 0;
+    font-size: 15px;
+
+    /*left: 0;*/
+    /*margin:2em auto;*/
+}
+
+/*todo lo lo de abajo antes llegar al cucu*/
+#div_explico_cucu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+/*todo el texto de arriba de cucú y lo de abajo hasta llegar al siguiente video*/
+#div_cucú{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+
+/*todo lo de aserrín y lo de abajo hasta llegar al siguiente video*/
+#div_aserrín{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+/*todo lo de estrellita y lo de abajo hasta llegar a las partituras*/
+#div_estrellita{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+#div_video4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+#div_juegos_interactivos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+#div_cumpleañosfeliz{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+#div_apartado_pentagrama_notas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+#div_video_practica_partituras{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+
+
+
+}
+
+
+/*Aquí termino diciendo cómo me llamo y meto todo lo del Acerca de*/
+#div_conclusion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 15px;
+    line-height: 40px;
+
+}
+
+/*PROPIEDADES DE TODAS LAS IMAGENES*/
+.img{
+    height:400px;
+    width: 400px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+}
+
+/*PROPIEDADES DE LAS IMAGENES DE LOS PENTAGRAMAS*/
+.img_pentagrama{
+    width: 800px;
+    height:400px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*PROPIEDADES DEl WIDGET*/
+.elfsight-app-4bdc09e1-8966-4837-8a7a-63d091f1ace5{
+    width: 800px;
+    height:400px;
+    font-size: 15px;
+    line-height: 45px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    position: fixed;
+}
+
+
+/*PROPIEDADES DE TODOS LOS VÍDEOS IFRAME*/
+iframe{
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+
+/*
+
+
+html{
+    font-size: 62.4%;
+    overflow: hidden;
+}
+
+body{
+    background: #f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--verde);
+}
+header .navbar a:hover{
+    color: var(--limon);
+
+}
+
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color: var(--verde);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.inicio .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 5.0rem;
+    color: #333;
+    text-transform: uppercase;
+
+}
+
+
+
+.acerca_de{
+    background:url("img/fondo_2.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-bottom: 3rem;
+    width: 980px;
+    margin:0 auto;
+}
+
+@media(max-width: 1200px){
+    html{
+    font-size: 55%;
+    }
+}
+@media(max-width: 768px)
+{
+   header  label{
+    visibility: visible;
+    opacity: 1;
+   }
+   header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem 2rem;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: .2s linear;
+
+   }
+
+   header .navbar a{
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+   }
+
+   header input:checked ~ .navbar{
+    transform: scaleY(1);
+    opacity: 1;
+   }
+   header input:checked ~ label::before{
+        content: '\f00d';
+   }
+
+   .inicio{
+        flex-flow: column-reverse;
+   }
+
+   .inicio .image img{
+    width: 100%;
+   }
+
+   .image .content h3{
+        font-size: 3.6rem;
+   }
+
+   .inicio .content p{
+        font-size: 1.5rem;
+   }
+}
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 49%;
+    }
+
+}*/

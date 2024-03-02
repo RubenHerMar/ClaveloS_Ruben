@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta &amp;gt; content="width=device-width, initial-scale=1.0" name="viewport">
+        <title> ♪♫♫ MI PÁGINA WEB ♪♬♫ </title>
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
+        <link rel="stylesheet" href="javascript.js">
+
+        <!--SCRIPT DE GEOLOCALIZACION-->
+        <script>
+            /** @type {HTMLElement}*/
+            let posElt;
+            /** @type {HTMLElement} */
+            var posLinkElt;
+
+            window.addEventListener('load', function(){
+                posElt = document.getElementById('Pos');
+                posLinkElt = document.querySelector('#PosLink > a');
+
+                // if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(geoposOK, geoposKO);
+                // }
+                // else {
+                // }
+            });
+
+            /** @param {GeolocationPosition} pos */
+            function geoposOK(pos) {
+                //Obtenemos latitud y longitud
+                var lat = pos.coords.latitude;
+                var long = pos.coords.longitude;
+                //Mostramos la posición
+                posElt.textContent = `${lat}, ${long}`;
+                //generamos enlace a la posición
+                posLinkElt.href = `https://maps.google.com/?q=${lat},${long}`;
+                posLinkElt.textContent = 'Mostrar tu posición en un mapa';
+            }
+
+            /** @param {GeolocationPositionError} err */
+            function geoposKO(err) {
+                console.warn(err.message);
+                let msg;
+                switch(err.code) {
+                    case err.PERMISSION_DENIED:
+                        msg = "No nos has dado permiso para obtener tu posición";
+                        break;
+                    case err.POSITION_UNAVAILABLE:
+                        msg = "Tu posición actual no está disponible";
+                        break;
+                     case err.TIMEOUT:
+                         msg = "No se ha podido obtener tu posición en un tiempo prudencial";
+                         break;
+                     default:
+                         msg = "Error desconocido";
+                         break;
+                }
+                posElt.textContent = msg;
+            }
+        </script>
+        <script src="javascript.js"></script>
+
+        <!--SCRIPT DE WIDGET EXTERNO-->
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+    </head>
+
+
+    <body>
+
+
+        <!-- EL BOTON DE IR HACIA ARRIBA NOS LLEVA A ESTA ANCLA -->
+        <a id="arriba"></a>
+
+        <header>
+
+            <!--AQUÍ PUEDO HACER ALGO COMO LO DE LA PÁGINA WEB ESTA SENCILLA Y METER EL LOGO DE MI PÁGINA WEB QUE ESTÁ
+            EN LA CARPETA DE IMÁGENES Y YA JUSTO DEBAJO EL DIV CON TODA LA BIENVENIDA-->
+            <span class="logo">ClaveloS Ruben</span>
+
+
+            <nav class="navbar">
+                <a href="aprende.html">Aprende</a>
+                <a href="acerca_de.html">Acerca de</a>
+            </nav>
+        </header>
+
+        <!--Enlaces internos para ir a la parte de abajo y anclar el "Ir a la parte de arriba" (esto último está antes del header)-->
+        <a href="#abajo">Ir a la parte de abajo</a>
+
+
+        <!--A partir del header, en el siguiente div irá toda la bienvenida y lo que aparecerá al abrir la página web-->
+
+        <div id="div_portada">
+            <h1>¡BIENVENID@ A CLAVELOS!</h1>
+
+
+            <div id="div_antes_flautas">
+                ¡¡DISFRUTA DE TODA NUESTRA INFORMACIÓN QUE TE OFRECEMOS!!<br>
+                ¡Bienvenido al mágico mundo de la música y la flauta!
+
+
+                <br>En mi rincón virtual, te sumergirás en un viaje fascinante donde la melodía y el aprendizaje se entrelazan para crear experiencias únicas. ¿Listo para descubrir el arte de tocar la flauta y explorar las maravillas de la música?
+
+
+
+                En este espacio vibrante, no solo aprenderás a deslizarte entre las notas, sino también a transformar cada sonido en una expresión única de ti mismo.
+                La música no solo se escucha, ¡se siente y se vive! <br> ¡Prepárate para desafiar tus límites, explorar nuevas tonalidades y dejarte llevar por la magia sonora que la flauta te ofrece!
+            </div>
+
+
+
+            <div id="div_img_flautas">
+                <img src="img/flautas.jpg" alt="">La imagen pertenece a<a href="https://www.esferamusical.com/viento/flauta/">esferamusical.com</a>
+            </div>
+
+            <div id="div_despues_flautas">
+                No importa si eres un principiante entusiasta o un músico experimentado, estás en el sitio correcto. Aquí encontrarás recursos emocionantes, lecciones inspiradoras y consejos prácticos que te guiarán en tu viaje musical. <br>La música es más que una serie de notas; es una conexión profunda con emociones, historias y momentos inolvidables.
+
+                Así que, descubre el placer de mejorar cada día, desbloquea tu creatividad y deja que la flauta sea tu cómplice en la aventura de la música.
+
+                ¡Adelante, embárcate en este viaje melódico con nosotros y deja que la música te lleve a lugares que nunca imaginaste!
+
+
+                Continúa viendo la web y aprendiendo gratis.
+                Para ello sigue viendo en nuestros diferentes apartados como el de "Aprende" en el que aprenderás canciones básicas y partituras típicas en el mundo de la música.
+            </div>
+            <div id="div_img_logo">
+                <img src="img/logo.png" alt="">Este logo lo he personalizado en<a href="https://turbologo.com/">turbologo.com</a>y el texto creado hasta ahora y a lo largo de la página web es propio
+            </div>
+
+
+        </div>
+
+        <!--Enlaces internos para subir a la parte de arriba y anclar el "Ir a la parte de abajo"-->
+        <a href="#arriba">Ir a la parte de arriba</a>
+        <a id="abajo"></a><br><br>
+
+        <!--Este es el div en el que aparece la geolocalización en el index y que variará de sí el usuario permite conocer su ubicación o no-->
+
+            <div id="div_footer">
+                <p>
+                    Si permites conocer la ubicación a esta página, podrás ver tu ubicación en este momento<br><br>
+                    ¿Quieres saber tu ubicación actual? <a target="_blank" href=""></a>
+                </p>
+                <p>
+                    Tu posición es: <span id="Pos">Desconocida</span>
+
+                </p>
+                <p
+                        id="PosLink"><a target="_blank"></a>
+                </p>
+                <footer>
+                    &copy; 2024. Aprende con ClaveloS, S.L.
+                    <a href="https://maps.app.goo.gl/z7VVbauiDPnDibuj6" >Av. de Filiberto Villalobos, 97, local. Salamanca.</a>
+                </footer>
+            </div>
+
+    </body>
+
+</html>
